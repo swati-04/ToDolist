@@ -7,7 +7,7 @@ function ToDoList() {
         e.preventDefault();
         if (value) {
             console.log('Submit the value');
-            const task = { id: new Date().getTime().toString(),value} //creating the object 'task'to store the all the submitted task
+            const task = { id: new Date().getTime().toString(),value}
             console.log(task);
             setToDos((toDOs) => {
                 return [...toDOs, task];
@@ -15,7 +15,7 @@ function ToDoList() {
             setValue('');
                     }
         else {
-            console.log("Emptyvalue");
+            console.log("Enter the value");
         }
     
         

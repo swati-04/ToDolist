@@ -18,6 +18,12 @@ function ToDoList() {
             console.log("Emptyvalue");
         }
     
+        
+    }
+    const removeEvent = (id) => {
+        let eventList =toDOs.filter(task => task.id !== id)
+        setToDos(eventList)
+
     }
     return (
         <>
@@ -34,6 +40,8 @@ function ToDoList() {
                     return (
                         <div className="item" key={id}>
                             <h4>{value}</h4>
+                            <button className='btn' onClick={() => removeEvent(task.id)}>Remove</button>
+
                         </div>
                     );
                 })
